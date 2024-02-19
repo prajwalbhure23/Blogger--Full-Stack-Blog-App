@@ -1,0 +1,23 @@
+.blogs-container{
+    max-width: 1110px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blogscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .blogs-container{
+        width: 730px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
