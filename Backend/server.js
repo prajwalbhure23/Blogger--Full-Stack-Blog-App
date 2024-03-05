@@ -27,7 +27,7 @@ app.use('/api/v1/blogs', blogRoutes)
  //     })
  // }) 
 
-const port = 4040;
+const port = process.env.PORT;
 
 app.listen(port,()=>{
     console.log(`Server running at port ${port}`);
