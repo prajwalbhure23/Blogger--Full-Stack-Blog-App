@@ -21,11 +21,11 @@ app.use(morgan('dev'))
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/blogs', blogRoutes)
 
-// app.get('/', (req,res)=>{
-//     res.status(200).send({
-//         "message": "node server"
-//     })
-// }) 
+ app.get('/', (req,res)=>{
+     res.status(200).send({
+         "message": "node server"
+     })
+ }) 
 
 const port = 4040;
 
