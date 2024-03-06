@@ -7,7 +7,7 @@ const connectDB = require('./config/connectDB');
 dotenv.config()
 
 const corsOptions = {
-  origin: 'https://blogger-frontend-iogp.onrender.com/', 
+  origin: 'https://blogger-frontend-iogp.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],       
   allowedHeaders: ['Content-Type'], 
 };
