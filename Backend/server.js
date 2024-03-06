@@ -6,6 +6,12 @@ const connectDB = require('./config/connectDB');
 
 dotenv.config()
 
+const corsOptions = {
+  origin: 'https://blogger-frontend-iogp.onrender.com/', 
+  methods: ['GET', 'POST'],       
+  allowedHeaders: ['Content-Type'], 
+};
+
 const userRoutes = require('./routes/user.routes')
 const blogRoutes = require('./routes/blog.routes')
 
@@ -13,7 +19,7 @@ connectDB();
 const app = express()
 
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(morgan('dev'))
 
