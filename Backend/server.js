@@ -7,6 +7,12 @@ const path = require('path');
 
 dotenv.config()
 
+// const corsOptions = {
+//   origin: 'https://blogger-full-stack-blog-app.vercel.app/', 
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],       
+//   allowedHeaders: ['Content-Type'], 
+// };
+
 const userRoutes = require('./routes/user.routes')
 const blogRoutes = require('./routes/blog.routes')
 
@@ -14,6 +20,7 @@ connectDB();
 const app = express()
 
 
+//app.use(cors(corsOptions))
 app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
@@ -29,11 +36,11 @@ app.get('*', function(req,res){
     res.sendFile(path.join(__dirname, './blogger-client/dist/index.html'))
 })
 
-// app.get('/', (req,res)=>{
-//     res.status(200).send({
-//         "message": "node server"
-//     })
-// }) 
+ app.get('/', (req,res)=>{
+     res.status(200).send({
+         "message": "node server"
+     })
+ }) 
 
 const port = process.env.PORT || 8000;
 
