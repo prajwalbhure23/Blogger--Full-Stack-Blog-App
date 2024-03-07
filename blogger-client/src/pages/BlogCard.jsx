@@ -24,7 +24,7 @@ function BlogCard({
 
     const handleDelete = async () => {
         try {
-            const { data } = await axios.delete(`http://localhost:4040/api/v1/blogs/deleteBlog/${id}`);
+            const { data } = await axios.delete(`https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/deleteBlog/${id}`);
             if (data && data.success) {
                 toast.success("Blog Deleted");
                 window.location.reload();

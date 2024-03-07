@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import toast from 'react-hot-toast';
 
 function BlogDetails() {
     const [blog, setBlog] = useState({});
@@ -12,7 +13,7 @@ function BlogDetails() {
   
     const getBlogDetail = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:4040/api/v1/blogs/getBlog/${id}`);
+            const { data } = await axios.get(`https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/getBlog/${id}`);
             if (data && data.success) {
                 setBlog(data && data.blog);
                 setInput({
@@ -40,7 +41,7 @@ function BlogDetails() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.put(`http://localhost:4040/api/v1/blogs/updateBlog/${id}`,{
+            const { data } = await axios.put(`https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/updateBlog/${id}`,{
                 title: input.title,
                 description: input.description,
                 image: input.image,

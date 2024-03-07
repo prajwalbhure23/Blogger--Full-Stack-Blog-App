@@ -27,7 +27,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     const {data} = await axios.post('http://localhost:4040/api/v1/user/login',{
+     const {data} = await axios.post('https://blogger-full-stack-blog-app.onrender.com/api/v1/user/login',{
       email: input.email, 
       password: input.password,
       }); 

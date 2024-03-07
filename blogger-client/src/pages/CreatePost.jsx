@@ -25,7 +25,7 @@ function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4040/api/v1/blogs/createBlog", {
+      const { data } = await axios.post("https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/createBlog", {
         title: input.title,
         description: input.description,
         image: input.image,
