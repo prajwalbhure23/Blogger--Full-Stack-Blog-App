@@ -7,12 +7,12 @@ const path = require('path');
 
 dotenv.config()
 
-const corsOptions = {
-  credentials: true,
-  origin: 'https://blogger-full-stack-blog-app.vercel.app/', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],       
-  allowedHeaders: ['Content-Type'], 
-};
+// const corsOptions = {
+//   credentials: true,
+//   origin: 'https://blogger-full-stack-blog-app.vercel.app/', 
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],       
+//   allowedHeaders: ['Content-Type'], 
+// };
 
 const userRoutes = require('./routes/user.routes')
 const blogRoutes = require('./routes/blog.routes')
@@ -21,8 +21,8 @@ connectDB();
 const app = express()
 
 
-app.use(cors(corsOptions))
-//app.use(cors())
+//app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
 
