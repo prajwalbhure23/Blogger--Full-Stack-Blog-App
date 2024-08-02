@@ -41,7 +41,7 @@ function BlogDetails() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.put(`https://blogger-full-stack-blog-app.vercel.app/api/v1/blogs/updateBlog/${id}`,{
+            const { data } = await axios.put(`https://blogger-full-stack-blog-app-jd4o.vercel.app/api/v1/blogs/updateBlog/${id}`,{
                 title: input.title,
                 description: input.description,
                 image: input.image,

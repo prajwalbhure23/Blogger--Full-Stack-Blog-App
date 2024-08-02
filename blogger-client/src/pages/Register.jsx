@@ -24,7 +24,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-     const {data} = await axios.post('https://blogger-full-stack-blog-app.vercel.app/api/v1/user/register',{
+     const {data} = await axios.post('https://blogger-full-stack-blog-app-jd4o.vercel.app/api/v1/user/register',{
       username: input.name, 
       email: input.email, 
       password: input.password,

@@ -25,7 +25,7 @@ function CreatePost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://blogger-full-stack-blog-app.vercel.app/api/v1/blogs/createBlog", {
+      const { data } = await axios.post("https://blogger-full-stack-blog-app-jd4o.vercel.app/api/v1/blogs/createBlog", {
         title: input.title,
         description: input.description,
         image: input.image,
