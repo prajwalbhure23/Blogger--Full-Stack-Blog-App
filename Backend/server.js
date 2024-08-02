@@ -8,7 +8,7 @@ const path = require('path');
 dotenv.config()
 
 const corsOptions = {
-  origin: 'https://blogger-full-stack-blog-app.vercel.app/', 
+  origin: 'https://blogger-full-stack-blog-app-jd4o.vercel.app/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],       
   allowedHeaders: ['Content-Type'], 
 };
