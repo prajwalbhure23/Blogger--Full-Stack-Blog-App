@@ -10,7 +10,7 @@ function Blogs() {
   
   const getAllBlogs = async()=>{
     try {
-      const {data} = await axios.get('https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/allBlogs')
+      const {data} = await axios.get('http://localhost:4040/api/v1/blogs/allBlogs')
       if(data && data.success){
         setBlogs(data.blogs)
         console.log(data)

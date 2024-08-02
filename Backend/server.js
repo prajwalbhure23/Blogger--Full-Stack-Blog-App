@@ -26,15 +26,15 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // static Files
-app.use(express.static(path.join(__dirname, './blogger-client/dist')))
+//app.use(express.static(path.join(__dirname, './blogger-client/dist')))
 
 //routes
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/blogs', blogRoutes);
 
-app.get('*', function(req,res){
-    res.sendFile(path.join(__dirname, './blogger-client/dist/index.html'))
-})
+// app.get('*', function(req,res){
+//      res.sendFile(path.join(__dirname, './blogger-client/dist/index.html'))
+// })
 
  app.get('/', (req,res)=>{
      res.status(200).send({

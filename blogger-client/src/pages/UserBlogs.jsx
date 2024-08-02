@@ -11,7 +11,7 @@ function UserBlogs() {
   const getUserBlogs = async () => {
     try {
       const id = localStorage.getItem("userId");
-      const { data } = await axios.get(`https://blogger-full-stack-blog-app.onrender.com/api/v1/blogs/userBlog/${id}`);
+      const { data } = await axios.get(`http://localhost:4040/api/v1/blogs/userBlog/${id}`);
       if (data && data.success) {
         setBlogs(data && data.userBlog && data.userBlog.blogs);
       }
